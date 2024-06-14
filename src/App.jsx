@@ -60,7 +60,7 @@ const App = () => {
     <div className='min-h-screen flex flex-col items-center justify-center'>
       <h1 className='text-bold text-5xl p-4 my-5'>TIC-TAC-TOE</h1>
       {winner && <h1 className='text-bold text-3xl text-green-600 '>Winner : {winner} !!</h1>}
-      {draw && <h1 className='text-bold text-3xl text-blue-600 '>It's a Draw!!</h1>}
+      {draw && !winner && <h1 className='text-bold text-3xl text-blue-600 '>It's a Draw!!</h1>}
       <h2 className='text-semibold text-2xl p-2'>Current : {current}</h2>
       <div className="board flex flex-wrap" style={{width:`300px`,height:`300px`}}>
         {squares.map((square,index) => {
