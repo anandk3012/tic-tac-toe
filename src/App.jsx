@@ -23,7 +23,7 @@ export default function App() {
       [0, 4, 8],
       [2, 4, 6]
     ];
-    for (let combination of winningCombinations) {
+    for (combination in winningCombinations) {
       const [a, b, c] = combination;
       if (squares[a] !== " " && squares[a] === squares[b] && squares[a] === squares[c]) {
         setWinner(squares[a]);
